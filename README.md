@@ -21,3 +21,6 @@ Lesson 2 - Layouts
 Lesson 3 - Material Design
 1. Material Design is built around three pillars: Color, Typography, and Shape.
 
+Lesson 4 - Lists and animations
+1. Composable functions can store local state in memory by using remember, and track changes to the value passed to mutableStateOf. Composables (and their children) using this state will get redrawn automatically when the value is updated. This is called recomposition. By using Compose’s state APIs like remember and mutableStateOf, any changes to state automatically update the UI.
+ 
