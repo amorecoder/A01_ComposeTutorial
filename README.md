@@ -9,6 +9,14 @@ At the end of this journey, I hope to be an expert in designing beautiful and fu
 
 Let's begin !
 
-Important Notes :
+Important Notes and Observations:
+Lesson 1
 1. Aside from using setContent from Activity or Fragment, a Composable can only be called from another Composable.
-2. 
+2. The @Preview annotation can only be applied to a Composable that DO NOT take in any parameter.
+
+Lesson 2
+1. Use Column to arrange item vertically. Use Row to arrange items horizontally, and use Box to stack elements.
+2. Compose uses modifiers to change the composable's size, layout, appearance or add high-level interactions, such as making an element clickable. You can chain them to create richer composables.
+
+Lesson 3
+
