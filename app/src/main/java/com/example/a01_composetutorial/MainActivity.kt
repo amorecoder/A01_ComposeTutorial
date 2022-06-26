@@ -4,6 +4,8 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.material.Text
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.tooling.preview.Preview
 
 /* The setContent block defines the activity's layout where composable functions are called.
 Composable functions can only be called from other composable functions.
@@ -15,8 +17,21 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            Text("Hello World!")
+            MessageCard("Android")
         }
     }
 }
 
+@Composable
+fun MessageCard(name: String) {
+    Text(text = "Hello $name!")
+}
+
+// The @Preview annotation can only be applied to a Composable that DO NOT take in any parameter.
+// Here we have to define another preview composable which does not have any input parameter. Inside,
+// it will call our MessageCard() composable.
+@Preview
+@Composable
+fun PreviewMessageCard() {
+    MessageCard(name = "Android")
+}
